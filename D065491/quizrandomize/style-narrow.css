@@ -1,0 +1,53 @@
+#page{
+	padding: 20px 10px 20px 10px;
+}
+
+h1{
+	text-align: center;
+}
+
+#form .question{
+	padding-left: 10px;
+	min-height: 0;
+}
+
+#form .question .question-number{
+	display: none;
+}
+
+#form .question .delete{
+	visibility: visible;
+}
+
+#form .question .delete:hover{
+	color: inherit;
+}
+
+#start div.button,
+#form div.button{
+	margin: 0;
+	width: 50%;
+	padding: 0 5px;
+	float: left;
+}
+
+#start div.button span,
+#form div.button span{
+	display: none;
+}
+
+#start div.button button,
+#form div.button button{
+	width: 100%;
+	padding: 14px 16px;
+	margin: 0;
+}
+
+div.button button[icon]{
+	background-position: 14px 13px !important;
+	padding: 14px 16px 14px 38px !important;
+}
+
+#form button#button-cancel{
+	display: none;
+}

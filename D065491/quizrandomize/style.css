@@ -1,0 +1,267 @@
+/* General */
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body{
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+}
+
+body{
+	font-family: "Helvetica Neue", Arial, Geneva, sans-serif;
+	font-size: 16px;
+	line-height: 150%;
+	color: rgb(0, 8, 9);
+	margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: rgb(80,170,195);
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+input, button, select, textarea{
+	font-family: "Helvetica Neue", Arial, Geneva, sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	color: rgb(85,85,85);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: white;
+	border: 1px solid rgb(200,200,200);
+	padding: 6px;
+}
+
+button{
+	color: rgb(50,50,50);
+	background-color: rgb(245,245,245);
+	padding: 8px 22px;
+	cursor: pointer;
+	line-height: 12px;
+}
+
+button .icon{
+	font-weight: bold;
+}
+
+#page{
+	max-width: 900px;
+	overflow: auto;
+	margin: 0 auto 0 auto;
+	padding: 20px 20px 30px 20px;
+}
+
+.error{
+	color: rgb(200,50,50);
+}
+
+
+/* Heading */
+
+h2{
+	font-size: 27px;
+	margin: 0 0 25px -3px;
+	font-weight: normal;
+	color: rgb(51, 202, 255);
+	font-family:"Open Sans","Helvetica Neue", Arial, Geneva, sans-serif;
+}
+
+
+/* Form (for editing quizzes) */
+
+#form #controls{
+	padding: 0 10px 20px 10px;
+	background-color: rgb(86, 196, 220);
+	margin: 10px 0 30px 0;
+	font-size: 14px;
+	overflow: auto;
+}
+
+#form #controls input,
+#form #controls select,
+#form #controls textarea{
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+#form #controls textarea{
+	height: 80px;
+}
+
+#form #controls select{
+	width: 150px;
+	height: 30px;
+	float: left;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+
+#form #controls label{
+	display: block;
+	clear: both;
+	margin-top: 15px;
+	float: left;
+}
+
+#form #controls .tip{
+	margin-top: 7px;
+	color: rgb(150,150,150);
+	line-height: 14px;
+	display: block;
+	float: left;
+}
+
+#form #questions{
+	position: relative;
+}
+
+#form .question{
+	background-color: rgb(245,245,245);
+	min-height: 203px;
+	margin: 0 0 30px 0;
+	position: relative;
+	overflow: hidden;
+	padding: 10px 25px 10px 190px
+}
+
+#form .question .question-number{
+	font-family: "Open Sans","Helvetica Neue", Arial, Geneva, sans-serif;
+	position: absolute;
+	font-size: 320px;
+	line-height: 230px;
+	left: -100px;
+	top: -23px;
+	letter-spacing: -80px;
+	width: 310px;
+	text-align: center;
+	opacity: 0.2;
+}
+
+#form .question .question-input{
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+#form .question .answer-number{
+	width: 130px;
+	height: 12px;
+	display: block;
+	float: left;
+	clear: left;
+}
+
+#form .question .answer-labels{
+	float: left;
+	line-height: 35px;
+	margin-top: -2px;
+}
+
+#form .question .answers{
+	margin-left: 130px;
+}
+
+#form .question .answers input{
+	width: 100%;
+	margin-bottom: 4px;
+}
+
+#form .question .delete{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #333333;
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+	position: absolute;
+	top: 0;
+	right: 4px;
+}
+
+#form .question .delete{
+	visibility: hidden;
+}
+
+
+#form .question:hover .delete{
+	visibility: visible;
+}
+
+#form .question .delete:hover{
+	color: red;
+}
+
+#form button.add{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+#form #button-cancel{
+	float: left;
+}
+
+#form div.button{
+	float: right;
+	clear: right;
+	margin-bottom: 10px;
+}
+
+#form div.button:last-child{
+	margin-bottom: 0;
+}
+
+#form div.button button{
+	margin: -2px 0 0 15px;
+}
+
+#form #button-rtf,
+#form #button-json,
+#start #button-new,
+#start #button-open{
+	background-color: rgb(80,170,195);
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-color: #3d8194;
+}
+
+#start div.button{
+	float: left;
+	margin-right: 15px;
+}
+
+
+/* Splash page */
+
+#start,
+form{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#start #description{
+	margin-bottom: 20px;
+}
+
+#start input#open-file{
+    position: absolute;
+    opacity: 0;
+}
+
+button[icon]{
+	background-repeat: no-repeat;
+	background-size: 14px;
+	background-position: 8px 8px;
+	padding: 8px 22px 8px 36px;
+}
